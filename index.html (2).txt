@@ -1,0 +1,858 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiencia de Transformación Consciente — Integrando tu mapa presente</title>
+  <meta name="description" content="Encuentro profundo e íntimo de trabajo grupal para explorar el presente desde una mirada energética, sistémica, corporal y emocional." />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+  <style>
+    :root{
+      --bg: #f8f6f7;
+      --surface: rgba(255,255,255,.82);
+      --surface-strong: #ffffff;
+      --text: #2b2b2b;
+      --muted: #6d6a70;
+      --title: #4d5562;
+      --pink: #d7a8b7;
+      --pink-dark: #bc8698;
+      --pink-soft: #f4e8ed;
+      --border: #eadde3;
+      --shadow: 0 12px 35px rgba(86, 67, 76, .08);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1160px;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1da851;
+    }
+
+
+    *{ box-sizing: border-box; }
+
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+
+    body{
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #ffffff 0%, #f8f6f7 42%, #f4f0f2 100%);
+    }
+
+
+    img{
+      display: block;
+      max-width: 100%;
+    }
+
+
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    .container{
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+
+    .section{
+      padding: 38px 0;
+    }
+
+
+    .section-title{
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+
+    .section-title h2{
+      margin: 0 0 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      color: var(--title);
+      font-weight: 600;
+      letter-spacing: .01em;
+    }
+
+
+    .section-title p{
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(248, 246, 247, .72);
+      border-bottom: 1px solid rgba(234, 221, 227, .7);
+    }
+
+
+    .topbar-inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 72px;
+    }
+
+
+    .brand{
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.55rem;
+      color: var(--title);
+      font-weight: 600;
+      letter-spacing: .01em;
+    }
+
+
+    .nav-actions{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: .96rem;
+      font-weight: 500;
+      transition: .25s ease;
+      cursor: pointer;
+    }
+
+
+    .btn-primary{
+      background: var(--pink);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(215, 168, 183, .35);
+    }
+
+
+    .btn-primary:hover{
+      background: var(--pink-dark);
+      transform: translateY(-1px);
+    }
+
+
+    .btn-secondary{
+      background: transparent;
+      color: var(--pink-dark);
+      border-color: var(--pink);
+    }
+
+
+    .btn-secondary:hover{
+      background: var(--pink-soft);
+    }
+
+
+    .btn-whatsapp{
+      background: var(--whatsapp);
+      color: white;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, .22);
+    }
+
+
+    .btn-whatsapp:hover{
+      background: var(--whatsapp-dark);
+      transform: translateY(-1px);
+    }
+
+
+    .hero{
+      padding: 44px 0 30px;
+    }
+
+
+    .hero-grid{
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+
+    .eyebrow{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+      font-size: .82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+
+    h1{
+      margin: 0 0 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.9rem, 6vw, 5.2rem);
+      line-height: .96;
+      color: var(--title);
+      font-weight: 600;
+      letter-spacing: -.01em;
+    }
+
+
+    .hero-subtitle{
+      margin: 0 0 18px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.45rem;
+      color: var(--pink-dark);
+      font-weight: 500;
+    }
+
+
+    .hero-copy p{
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 650px;
+    }
+
+
+    .hero-actions{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+
+    .hero-note{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+
+    .mini-card{
+      padding: 14px 14px;
+      background: rgba(255,255,255,.68);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+
+    .mini-card strong{
+      display: block;
+      color: var(--title);
+      font-size: .95rem;
+      margin-bottom: 4px;
+    }
+
+
+    .mini-card span{
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+
+    .hero-visual{
+      position: relative;
+      min-height: 540px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: var(--surface-strong);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+
+    .hero-visual img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .hero-badge{
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 16px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      max-width: 280px;
+    }
+
+
+    .hero-badge strong{
+      display: block;
+      margin-bottom: 4px;
+      color: var(--title);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+    }
+
+
+    .hero-badge span{
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.5;
+    }
+
+
+    .grid-2{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+
+    .grid-3{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+
+    .card{
+      background: var(--surface);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+
+    .card h3{
+      margin: 0 0 14px;
+      font-family: "Cormorant Garamond", serif;
+      color: var(--title);
+      font-size: 2rem;
+      line-height: 1.05;
+      font-weight: 600;
+    }
+
+
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    .card ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+
+    .icon-card{
+      text-align: center;
+    }
+
+
+    .icon-bubble{
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--pink-soft);
+      color: var(--pink-dark);
+      font-size: 1.6rem;
+      border: 1px solid var(--border);
+    }
+
+
+    .quote{
+      margin-top: 22px;
+      padding: 22px 24px;
+      background: #fff;
+      border-left: 4px solid var(--pink);
+      border-radius: 0 16px 16px 0;
+      box-shadow: var(--shadow);
+      font-family: "Cormorant Garamond", serif;
+      color: var(--title);
+      font-size: 1.7rem;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+
+    .quote small{
+      display: block;
+      margin-top: 8px;
+      font-family: Inter, sans-serif;
+      font-size: .95rem;
+      color: var(--muted);
+    }
+
+
+    .facilitadora{
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    .facilitadora::after{
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(244,232,237,.95) 0%, rgba(244,232,237,0) 72%);
+      pointer-events: none;
+    }
+
+
+    .facilitadora .role{
+      color: var(--pink-dark);
+      font-weight: 500;
+      margin-top: 8px;
+      display: block;
+    }
+
+
+    .form-wrap{
+      background: rgba(255,255,255,.78);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+
+    .form-wrap iframe{
+      width: 100%;
+      min-height: 1180px;
+      border: 0;
+      border-radius: 16px;
+      background: white;
+    }
+
+
+    .bottom-cta{
+      text-align: center;
+    }
+
+
+    .bottom-cta .cta-group{
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+
+    footer{
+      padding: 30px 0 44px;
+      text-align: center;
+      color: #817b82;
+      font-size: .94rem;
+    }
+
+
+    .floating-whatsapp{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--whatsapp);
+      color: #fff;
+      font-size: 1.5rem;
+      box-shadow: 0 14px 28px rgba(37, 211, 102, .28);
+      transition: .25s ease;
+    }
+
+
+    .floating-whatsapp:hover{
+      transform: translateY(-2px) scale(1.03);
+      background: var(--whatsapp-dark);
+    }
+
+
+    @media (max-width: 980px){
+      .hero-grid,
+      .grid-2,
+      .grid-3{
+        grid-template-columns: 1fr;
+      }
+
+
+      .hero-note{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .hero-visual{
+        min-height: 360px;
+      }
+    }
+
+
+    @media (max-width: 640px){
+      .topbar-inner{
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 0;
+      }
+
+
+      .brand{
+        text-align: center;
+      }
+
+
+      .nav-actions,
+      .hero-actions,
+      .bottom-cta .cta-group{
+        flex-direction: column;
+      }
+
+
+      .btn{
+        width: 100%;
+      }
+
+
+      .hero-note{
+        grid-template-columns: 1fr;
+      }
+
+
+      .card{
+        padding: 22px 20px;
+      }
+
+
+      .form-wrap iframe{
+        min-height: 1280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">Integrando tu mapa presente</div>
+
+
+      <div class="nav-actions">
+        <a href="#detalle" class="btn btn-secondary">Ver detalles</a>
+        <a href="#contacto" class="btn btn-primary">Reservar lugar</a>
+        <a href="https://wa.me/5491135669167?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20para%20la%20Experiencia%20de%20Transformaci%C3%B3n%20Consciente" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">23 de mayo · Maschwitz · Buenos Aires</div>
+
+
+        <h1>Experiencia de Transformación Consciente</h1>
+        <div class="hero-subtitle">Integrando tu mapa presente</div>
+
+
+        <p>
+          Un encuentro profundo e íntimo de trabajo grupal, pensado para explorar las distintas capas que hoy conforman el presente de cada persona.
+        </p>
+
+
+        <p>
+          A través de una lectura del campo energético y sistémico, iremos observando aquello que hoy necesita claridad, reorganización y movimiento.
+        </p>
+
+
+        <p>
+          La propuesta integra distintas dimensiones del proceso personal: corporal, emocional, vincular y energética, en un espacio reducido, cuidado y de verdadera profundidad.
+        </p>
+
+
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-primary">Reservar ahora</a>
+          <a href="#detalle" class="btn btn-secondary">Conocer la experiencia</a>
+          <a href="https://wa.me/5491135669167?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Integrando%20tu%20mapa%20presente" target="_blank" class="btn btn-whatsapp">Consultar por WhatsApp</a>
+        </div>
+
+
+        <div class="hero-note">
+          <div class="mini-card">
+            <strong>Horario</strong>
+            <span>14 a 19 hs aprox.</span>
+          </div>
+          <div class="mini-card">
+            <strong>Modalidad</strong>
+            <span>Presencial</span>
+          </div>
+          <div class="mini-card">
+            <strong>Cupo</strong>
+            <span>Máximo 9 personas</span>
+          </div>
+          <div class="mini-card">
+            <strong>Valor</strong>
+            <span>$90.000</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="hero-visual">
+        <img src="image-transformacion-consciente.jpeg" alt="Espacio de transformación consciente" />
+        <div class="hero-badge">
+          <strong>Grupo reducido</strong>
+          <span>Un espacio íntimo, personalizado y sostenido con escucha fina.</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+
+
+    <section id="detalle" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Un espacio profundo para observar tu presente</h2>
+          <p>
+            No se trata de un encuentro masivo ni estandarizado. La intención es acompañar cada proceso con presencia, sensibilidad y una mirada integral.
+          </p>
+        </div>
+
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Información del encuentro</h3>
+            <ul>
+              <li><strong>Fecha:</strong> 23 de mayo</li>
+              <li><strong>Horario:</strong> 14 a 19 hs aprox.</li>
+              <li><strong>Lugar:</strong> Maschwitz · Buenos Aires</li>
+              <li><strong>Duración:</strong> 5 a 6 horas</li>
+              <li><strong>Grupo reducido:</strong> máximo 9 personas</li>
+              <li><strong>Valor del encuentro:</strong> $90.000</li>
+              <li><strong>Reservas e información:</strong> por formulario o WhatsApp</li>
+            </ul>
+          </article>
+
+
+          <article class="card">
+            <h3>Sobre la propuesta</h3>
+            <p>
+              Durante la experiencia iremos observando dinámicas emocionales, energéticas y sistémicas que muchas veces se manifiestan a través de vínculos, bloqueos, cansancio, repetición de patrones o momentos de confusión interna.
+            </p>
+          </article>
+        </div>
+
+
+        <div class="quote">
+          “Aquello que buscás también está buscando encontrarte.”
+          <small>— Rumi</small>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Qué trabajaremos</h2>
+          <p>
+            La experiencia busca ampliar la percepción sobre el momento vital que cada persona se encuentra atravesando.
+          </p>
+        </div>
+
+
+        <div class="grid-3">
+          <article class="card icon-card">
+            <div class="icon-bubble">✧</div>
+            <h3>Lectura del presente</h3>
+            <p>Lectura energética y sistémica para observar lo que hoy necesita claridad y reorganización.</p>
+          </article>
+
+
+          <article class="card icon-card">
+            <div class="icon-bubble">◎</div>
+            <h3>Patrones y vínculos</h3>
+            <p>Observación de patrones inconscientes, repeticiones y dinámicas vinculares que piden ser vistas.</p>
+          </article>
+
+
+          <article class="card icon-card">
+            <div class="icon-bubble">☾</div>
+            <h3>Integración profunda</h3>
+            <p>Registro corporal, integración emocional y energética, movimiento y reorganización interna.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <article class="card">
+            <h3>Durante la experiencia</h3>
+            <ul>
+              <li>Lectura energética y sistémica del presente</li>
+              <li>Observación de patrones inconscientes y dinámicas repetitivas</li>
+              <li>Integración emocional y energética</li>
+              <li>Registro corporal y percepción consciente</li>
+              <li>Movimiento y reorganización interna</li>
+              <li>Claridad sobre procesos personales y vinculares</li>
+              <li>Sesión grupal en Cámara Takion</li>
+            </ul>
+          </article>
+
+
+          <article class="card">
+            <h3>Campo grupal cuidado</h3>
+            <p>
+              La sesión grupal en Cámara Takion será facilitada junto a Ximena Bustos, acompañando el proceso energético y sistémico de cada participante dentro del campo grupal.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Quienes acompañan el proceso</h2>
+        </div>
+
+
+        <div class="grid-2">
+          <article class="card facilitadora">
+            <h3>Lic. Denise Lombardo</h3>
+            <span class="role">Método Esencia en Movimiento</span>
+            <p>
+              Acompaña el proceso desde una mirada sensible e integral, orientada a dar claridad, lectura y movimiento a lo que hoy está presente.
+            </p>
+          </article>
+
+
+          <article class="card facilitadora">
+            <h3>Ximena Bustos</h3>
+            <span class="role">Cámara Takion · Breathwork</span>
+            <p>
+              Facilita el acompañamiento energético y sistémico dentro del campo grupal, sosteniendo profundidad, presencia y reorganización interna.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contacto" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Reserva tu lugar</h2>
+          <p>
+            Completa el formulario para reservar o solicitar más información. Las respuestas quedan registradas directamente en tu Google Form.
+          </p>
+        </div>
+
+
+        <div class="form-wrap">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSd2knSEvhfF4bA7An0Ts9PEO5b3pM374oaZvu6wq2Ccdgwz5w/viewform?embedded=true"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">
+            Cargando…
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container bottom-cta">
+        <div class="section-title">
+          <h2>¿Tienes dudas antes de reservar?</h2>
+          <p>
+            También puedes escribir directamente por WhatsApp para recibir información personalizada.
+          </p>
+        </div>
+
+
+        <div class="cta-group">
+          <a href="#contacto" class="btn btn-primary">Ir al formulario</a>
+          <a href="https://wa.me/5491135669167?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20la%20Experiencia%20de%20Transformaci%C3%B3n%20Consciente" target="_blank" class="btn btn-whatsapp">Hablar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <footer>
+    <div class="container">
+      © 2026 · Experiencia de Transformación Consciente
+    </div>
+  </footer>
+
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/5491135669167?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20encuentro"
+    target="_blank"
+    aria-label="Escribir por WhatsApp">
+    💬
+  </a>
+
+
+</body>
+</html>
