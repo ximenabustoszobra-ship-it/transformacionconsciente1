@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experiencia Taquiónica con Handpan</title>
+  <title>Integrando tu Mapa Presente</title>
   <style>
     :root{
       --bg-1:#fffdf8;
@@ -156,7 +156,7 @@
       color:transparent;
     }
     .subtitle{
-      max-width:780px;
+      max-width:840px;
       margin:0 auto 24px;
       color:var(--text-soft);
       font-size:1.08rem;
@@ -278,9 +278,48 @@
     }
     .info-box p{
       max-width:860px;
-      margin:0 auto 10px;
+      margin:0 auto 16px;
       color:var(--text-soft);
       font-size:1.03rem;
+      text-align:left;
+    }
+    .info-box ul{
+      max-width:860px;
+      margin:20px auto;
+      text-align:left;
+      list-style:none;
+      padding:0;
+    }
+    .info-box ul li{
+      padding:10px 0 10px 32px;
+      position:relative;
+      color:var(--text-soft);
+      font-size:1.03rem;
+    }
+    .info-box ul li::before{
+      content:"✨";
+      position:absolute;
+      left:0;
+      top:10px;
+    }
+    .quote{
+      max-width:720px;
+      margin:32px auto;
+      padding:28px;
+      background:linear-gradient(135deg, rgba(252,243,220,.65), rgba(244,227,181,.55));
+      border-left:4px solid var(--gold);
+      border-radius:16px;
+      font-style:italic;
+      color:var(--text);
+      font-size:1.1rem;
+      text-align:center;
+    }
+    .quote cite{
+      display:block;
+      margin-top:12px;
+      font-style:normal;
+      font-weight:700;
+      color:var(--gold-3);
     }
     .features{
       display:grid;
@@ -307,6 +346,37 @@
     .feature p{
       margin:0;
       font-size:.97rem;
+    }
+    .facilitators{
+      padding:8px 0 48px;
+    }
+    .facilitators-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:24px;
+      margin-top:28px;
+    }
+    .facilitator-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,250,242,0.75));
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.6);
+      border-radius:var(--radius-xl);
+      padding:32px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .facilitator-card h3{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:1.6rem;
+      color:#44331f;
+      margin-bottom:8px;
+    }
+    .facilitator-card .role{
+      color:var(--gold-3);
+      font-weight:700;
+      margin-bottom:16px;
+      font-size:.95rem;
     }
     .form-section{
       padding:4px 0 72px;
@@ -345,7 +415,8 @@
     }
     @media (max-width: 940px){
       .gallery-grid,
-      .features{
+      .features,
+      .facilitators-grid{
         grid-template-columns:1fr;
       }
       .card img{
@@ -359,6 +430,10 @@
       .form-wrap{
         border-radius:24px;
       }
+      .info-box p,
+      .info-box ul{
+        text-align:left;
+      }
     }
   </style>
 </head>
@@ -368,24 +443,27 @@
     <span></span><span></span><span></span><span></span>
   </div>
   <script>
-    const EVENT_DATE = "Domingo 14 de junio";
+    const EVENT_DATE = "Domingo 23 de mayo";
+    const EVENT_TIME = "14 a 19 hs";
     const TOTAL_SEATS = 9;
     const AVAILABLE_SEATS = 9;
-    const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeL_u6KsWp5GL2OZ8bPO9sRSWWSwLu70ZagFVrgk35fI7rv-Q/viewform?usp=header";
+    const PRICE = "$90.000";
+    const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeL_u6KsWp5GL2OZ8bPO9sRSWWSwLu70ZagFVrgk35fI7rv-Q/viewform";
   </script>
   <section class="hero">
     <div class="container">
       <div class="hero-panel">
-        <div class="badge">✨ Experiencia íntima y transformadora</div>
+        <div class="badge">✨ Encuentro profundo e íntimo</div>
         <h1>
-          Experiencia <span class="gold">Taquiónica</span><br>
-          con Handpan
+          <span class="gold">Integrando</span><br>
+          tu Mapa Presente
         </h1>
         <p class="subtitle">
-          Una vivencia de relajación, presencia y conexión interior, acompañada por la vibración envolvente del handpan en vivo en un entorno de calma, belleza y armonización profunda.
+          Un espacio de trabajo grupal profundo, pensado para explorar las distintas capas que hoy conforman tu presente. Durante 5-6 horas trabajaremos en grupo reducido para sostener un espacio cuidado, personalizado y de verdadera profundidad.
         </p>
         <div class="hero-meta">
           <div class="meta-pill" id="event-date"></div>
+          <div class="meta-pill" id="event-time"></div>
           <div class="meta-pill" id="seat-counter"></div>
         </div>
         <div class="cta-group">
@@ -395,55 +473,103 @@
       </div>
     </div>
   </section>
+  
   <section class="gallery">
     <div class="container">
       <div class="gallery-grid">
         <article class="card">
           <img src="1779062523230_7e33c45a-e2dc-4478-87a5-3258284b39f1.jpeg" alt="Sesión con handpan en domo geodésico">
           <div class="card-caption">
-            Sonido en vivo, geometría sagrada y una atmósfera de profunda presencia.
+            Un espacio cuidado y consciente para la exploración profunda.
           </div>
         </article>
         <article class="card">
-          <img src="1779062527130_36ab546b-9cd5-4c37-9031-465ff232c274.jpeg" alt="Meditación en espacio de armonización">
+          <img src="1779062527130_36ab546b-9cd5-4c37-9031-465ff232c274.jpeg" alt="Espacio de trabajo grupal">
           <div class="card-caption">
-            Un espacio para abrirte a la calma, la recepción y la armonización interior.
+            Trabajo personalizado en grupo reducido de máximo 9 personas.
           </div>
         </article>
       </div>
     </div>
   </section>
+  
   <section class="info">
     <div class="container">
       <div class="info-box">
-        <div class="section-kicker">Experiencia</div>
-        <h2>🌿 ¿Qué vas a vivir?</h2>
+        <div class="section-kicker">Propuesta</div>
+        <h2>🌿 ¿Qué vamos a trabajar?</h2>
         <p>
-          Esta experiencia une la Cámara Taquiónica con la vibración del handpan en vivo, creando una atmósfera envolvente de apertura, serenidad y conexión profunda.
+          La propuesta estará orientada a observar y comprender dinámicas emocionales, energéticas y sistémicas que muchas veces se manifiestan a través de vínculos, bloqueos, cansancio, repetición de patrones o momentos de confusión interna.
         </p>
         <p>
-          El sonido acompaña el proceso, ayuda a aquietar la mente y favorece una vivencia más receptiva, amorosa y presente.
+          A través de una lectura del campo energético y sistémico, iremos observando aquello que hoy necesita claridad, reorganización y movimiento. El trabajo busca ampliar la percepción sobre el momento vital que cada persona se encuentra atravesando, integrando distintas dimensiones: corporal, emocional, vincular y energética.
         </p>
+        <p>
+          No se trata de un encuentro masivo ni estandarizado. La intención es generar un espacio profundo, consciente y de escucha fina, donde cada participante pueda sentirse acompañado en su proceso personal.
+        </p>
+        
+        <h3 style="font-family: Georgia, serif; font-size: 1.6rem; color: #44331f; margin-top: 32px; margin-bottom: 16px;">Durante la experiencia trabajaremos:</h3>
+        <ul>
+          <li>Lectura energética y sistémica del presente</li>
+          <li>Observación de patrones inconscientes y dinámicas repetitivas</li>
+          <li>Integración emocional y energética</li>
+          <li>Registro corporal y percepción consciente</li>
+          <li>Movimiento y reorganización interna</li>
+          <li>Claridad sobre procesos personales y vinculares</li>
+          <li>Sesión grupal en Cámara Takion facilitada junto a Ximena Bustos, acompañando el proceso energético y sistémico de cada participante dentro del campo grupal</li>
+        </ul>
+        
+        <div class="quote">
+          "Aquello que buscás también está buscando encontrarte."
+          <cite>— Rumi</cite>
+        </div>
+        
         <div class="features">
           <div class="feature">
-            <div class="icon">✨</div>
-            <h3>Presencia</h3>
-            <p>El handpan ayuda a anclarte en el aquí y ahora.</p>
+            <div class="icon">📍</div>
+            <h3>Ubicación</h3>
+            <p>Maschwitz, Buenos Aires</p>
           </div>
           <div class="feature">
-            <div class="icon">💛</div>
-            <h3>Armonización</h3>
-            <p>Un espacio suave para soltar tensión y recibir.</p>
+            <div class="icon">⏱️</div>
+            <h3>Duración</h3>
+            <p>5 a 6 horas aprox.</p>
           </div>
           <div class="feature">
-            <div class="icon">🌟</div>
-            <h3>Solo 9 plazas</h3>
-            <p>Una experiencia íntima para cuidar la profundidad del encuentro.</p>
+            <div class="icon">💰</div>
+            <h3>Inversión</h3>
+            <p id="price-display"></p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
+  <section class="facilitators">
+    <div class="container">
+      <div class="info-box">
+        <div class="section-kicker">Facilitadoras</div>
+        <h2>✨ Quiénes te acompañan</h2>
+        <div class="facilitators-grid">
+          <div class="facilitator-card">
+            <h3>Lic. Denise Lombardo</h3>
+            <p class="role">Método Esencia en Movimiento</p>
+            <p style="color: var(--text-soft); line-height: 1.7;">
+              Especialista en lectura energética y trabajo sistémico, facilitando procesos de integración emocional y reorganización interna.
+            </p>
+          </div>
+          <div class="facilitator-card">
+            <h3>Ximena Bustos</h3>
+            <p class="role">Cámara Takion · Breathwork</p>
+            <p style="color: var(--text-soft); line-height: 1.7;">
+              Facilita sesiones en Cámara Taquiónica y Breathwork, acompañando procesos de armonización y conexión profunda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <section class="form-section" id="inscripcion">
     <div class="container">
       <div class="form-wrap">
@@ -466,16 +592,17 @@
               📝 Completar Inscripción
             </a>
             <p style="margin-top: 24px; font-size: 0.95rem; color: var(--text-soft);">
-              ✨ Solo quedan <strong>9</strong> lugares disponibles
+              ✨ Solo quedan <strong id="available-seats-text"></strong> lugares disponibles
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
   <footer class="footer">
     <div class="container">
-      ✨ Fecha editable · Reutilizable · Cupos limitados a 9
+      ✨ Encuentro profundo · Grupo reducido · Máximo 9 personas
     </div>
   </footer>
   
@@ -483,7 +610,7 @@
     <div class="container">
       <div style="background: linear-gradient(135deg, rgba(255,250,240,.95), rgba(245,230,192,.88)); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; box-shadow: var(--shadow-soft); text-align: center;">
         <p style="color: var(--text); font-size: 1rem; line-height: 1.7; margin: 0; max-width: 720px; margin: 0 auto;">
-          💛 <strong>Importante:</strong> El valor del taller se abona en su totalidad. Solo cancelando 48 hs antes, se reintegra el importe.
+          💛 <strong>Importante:</strong> El taller se abona en su totalidad para confirmar tu inscripción. En caso de no poder asistir, se debe avisar 48 hs antes, de lo contrario no hay reembolso.
         </p>
       </div>
     </div>
@@ -491,7 +618,10 @@
   
   <script>
     document.getElementById("event-date").textContent = "🗓️ " + EVENT_DATE;
-    document.getElementById("seat-counter").textContent = "💛 Cupos disponibles: " + AVAILABLE_SEATS + " de " + TOTAL_SEATS;
+    document.getElementById("event-time").textContent = "⏰ " + EVENT_TIME;
+    document.getElementById("seat-counter").textContent = "💛 Cupos: " + AVAILABLE_SEATS + " de " + TOTAL_SEATS;
+    document.getElementById("price-display").textContent = PRICE;
+    document.getElementById("available-seats-text").textContent = AVAILABLE_SEATS;
     document.getElementById("open-form-btn").href = FORM_URL;
   </script>
 </body>
