@@ -1,10 +1,11 @@
 
-  <!DOCTYPE html>
+  
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformación Consciente</title>
+    <title>Integrando Tu Mapa Presente - 14 de Junio</title>
     <style>
         * {
             margin: 0;
@@ -13,42 +14,54 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #4a4a4a;
+            background: linear-gradient(135deg, #ffeef8 0%, #fff5e6 100%);
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #d4a5a5 0%, #e8b5ce 50%, #c9a66b 100%);
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 15px rgba(212, 165, 165, 0.3);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            font-weight: 300;
+            letter-spacing: 2px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-style: italic;
+            opacity: 0.95;
         }
 
-        main {
-            max-width: 1200px;
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
 
-        /* NUEVO: Estilos para las imágenes responsive */
+        /* Estilos para la imagen */
+        .image-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
         img {
             width: auto;
             height: auto;
             display: block;
             margin: 30px auto;
             object-fit: contain;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(212, 165, 165, 0.3);
         }
 
         /* Móviles */
@@ -65,97 +78,277 @@
             }
         }
 
-        section {
-            margin-bottom: 3rem;
+        .info-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(212, 165, 165, 0.2);
+            border: 2px solid #e8b5ce;
         }
 
         h2 {
-            color: #667eea;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
+            color: #d4a5a5;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 1px;
         }
 
-        .content {
-            background: #f9f9f9;
+        h3 {
+            color: #c9a66b;
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 400;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #fff0f5 0%, #fff9e6 100%);
             padding: 2rem;
+            border-left: 4px solid #d4a5a5;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+
+        ul li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        ul li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .detail-card {
+            background: linear-gradient(135deg, #fff0f5 0%, #fff9e6 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e8b5ce;
+        }
+
+        .detail-card h4 {
+            color: #d4a5a5;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-card p {
+            color: #4a4a4a;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+
+        .quote {
+            text-align: center;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #c9a66b;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(201, 166, 107, 0.2);
+        }
+
+        .quote-author {
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #d4a5a5;
+        }
+
+        .facilitators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .facilitator {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(212, 165, 165, 0.15);
+        }
+
+        .facilitator h4 {
+            color: #d4a5a5;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .facilitator p {
+            color: #c9a66b;
+            font-size: 1rem;
+            text-align: center;
         }
 
         .cta-button {
             display: inline-block;
-            background: #667eea;
+            background: linear-gradient(135deg, #d4a5a5 0%, #e8b5ce 50%, #c9a66b 100%);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.5rem 3rem;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
-            margin-top: 1rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            margin: 2rem auto;
+            display: block;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 6px 20px rgba(212, 165, 165, 0.4);
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
         .cta-button:hover {
-            background: #764ba2;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 165, 165, 0.5);
         }
 
         footer {
-            background: #333;
+            background: linear-gradient(135deg, #d4a5a5 0%, #e8b5ce 50%, #c9a66b 100%);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
             margin-top: 3rem;
         }
 
-        ul {
-            margin-left: 2rem;
-            margin-top: 1rem;
-        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
 
-        li {
-            margin-bottom: 0.5rem;
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .info-box {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>🌟 Transformación Consciente 🌟</h1>
-        <p>Tu camino hacia el bienestar integral</p>
+        <h1>✨ INTEGRANDO TU MAPA PRESENTE ✨</h1>
+        <p>Encuentro del domingo 14 de junio</p>
     </header>
 
-    <main>
-        <section>
-            <h2>Bienvenido</h2>
-            <div class="content">
-                <img src="taller-denis-ia.jpg" alt="Transformación Consciente">
-                <p>Descubre el poder de la transformación consciente. Un viaje hacia tu mejor versión.</p>
-            </div>
-        </section>
+    <div class="container">
+        <div class="image-container">
+            <img src="taller-denis-ia_7d4710c5-5454-4f71-ae8f-ebc491da3956.jpeg" alt="Encuentro de Transformación Consciente">
+        </div>
 
-        <section>
-            <h2>Nuestros Servicios</h2>
-            <div class="content">
-                <ul>
-                    <li>🧘‍♀️ Meditación y Mindfulness</li>
-                    <li>💪 Coaching Personal</li>
-                    <li>🌱 Desarrollo Personal</li>
-                    <li>✨ Terapias Holísticas</li>
-                </ul>
+        <div class="info-box">
+            <h2>🌸 Sobre el Encuentro 🌸</h2>
+            <p>El día 14 de junio vamos a compartir un encuentro profundo e íntimo de trabajo grupal, pensado para explorar las distintas capas que hoy conforman el presente de cada persona.</p>
+            
+            <p>Durante aproximadamente 5 a 6 horas trabajaremos con un grupo muy reducido —máximo 9 personas— para sostener un espacio cuidado, personalizado y de verdadera profundidad.</p>
+            
+            <p>La propuesta estará orientada a observar y comprender dinámicas emocionales, energéticas y sistémicas que muchas veces se manifiestan a través de vínculos, bloqueos, cansancio, repetición de patrones o momentos de confusión interna.</p>
+            
+            <p>A través de una lectura del campo energético y sistémico, iremos observando aquello que hoy necesita claridad, reorganización y movimiento. El trabajo busca ampliar la percepción sobre el momento vital que cada persona se encuentra atravesando, integrando distintas dimensiones: corporal, emocional, vincular y energética.</p>
+            
+            <div class="highlight">
+                <p><strong>No se trata de un encuentro masivo ni estandarizado.</strong> La intención es generar un espacio profundo, consciente y de escucha fina, donde cada participante pueda sentirse acompañado en su proceso personal.</p>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>Comienza Tu Transformación</h2>
-            <div class="content">
-                <p>¿Listo para dar el primer paso? Contáctanos y comienza tu viaje de transformación hoy mismo.</p>
-                <a href="#contacto" class="cta-button">Contáctanos Ahora</a>
+        <div class="info-box">
+            <h3>🌟 Durante la experiencia trabajaremos:</h3>
+            <ul>
+                <li>Lectura energética y sistémica del presente</li>
+                <li>Observación de patrones inconscientes y dinámicas repetitivas</li>
+                <li>Integración emocional y energética</li>
+                <li>Registro corporal y percepción consciente</li>
+                <li>Movimiento y reorganización interna</li>
+                <li>Claridad sobre procesos personales y vinculares</li>
+                <li>Sesión grupal en Cámara Takion facilitada junto a Ximena Bustos, acompañando el proceso energético y sistémico de cada participante dentro del campo grupal</li>
+            </ul>
+        </div>
+
+        <div class="quote">
+            "Aquello que buscás también está buscando encontrarte."
+            <span class="quote-author">— Rumi</span>
+        </div>
+
+        <div class="info-box">
+            <h2>💫 Facilitadoras 💫</h2>
+            <div class="facilitators">
+                <div class="facilitator">
+                    <h4>Lic. Denise Lombardo</h4>
+                    <p>Método Esencia en Movimiento</p>
+                </div>
+                <div class="facilitator">
+                    <h4>Ximena Bustos</h4>
+                    <p>Cámara Tachyon · Breathwork</p>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+
+        <div class="info-box">
+            <h2>📅 Detalles del Encuentro 📅</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <h4>📆 Fecha</h4>
+                    <p>14 de junio</p>
+                </div>
+                <div class="detail-card">
+                    <h4>🕐 Horario</h4>
+                    <p>14 a 19 hs aprox.</p>
+                </div>
+                <div class="detail-card">
+                    <h4>📍 Lugar</h4>
+                    <p>Maschwitz, Buenos Aires</p>
+                </div>
+                <div class="detail-card">
+                    <h4>👥 Cupos</h4>
+                    <p>Máximo 9 personas</p>
+                </div>
+                <div class="detail-card">
+                    <h4>💰 Inversión</h4>
+                    <p>$90.000</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2knSEvhfF4bA7An0Ts9PEO5b3pM374oaZvu6wq2Ccdgwz5w/viewform?usp=header" class="cta-button" target="_blank">
+            ✨ RESERVÁ TU LUGAR AQUÍ ✨
+        </a>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Transformación Consciente. Todos los derechos reservados.</p>
+        <p>🌸 Transformación Consciente · 2024 🌸</p>
     </footer>
 </body>
-</html>  
+</html>
